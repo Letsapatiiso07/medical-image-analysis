@@ -1,0 +1,83 @@
+{
+  "dataset": "PneumoniaMNIST 64x64 (MedMNIST v3), official splits",
+  "split_sizes": {
+    "train": 4708,
+    "val": 524,
+    "test": 624
+  },
+  "threshold": 0.5,
+  "seed": 42,
+  "tensorflow": "2.21.0",
+  "total_seconds": 677.4,
+  "results": {
+    "Majority baseline": {
+      "accuracy": 0.625,
+      "roc_auc": 0.5,
+      "sensitivity": 1.0,
+      "specificity": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          234
+        ],
+        [
+          0,
+          390
+        ]
+      ],
+      "roc_auc_95ci": [
+        0.5,
+        0.5
+      ],
+      "note": "always predicts 'pneumonia'"
+    },
+    "Small CNN": {
+      "accuracy": 0.8910256410256411,
+      "roc_auc": 0.9628424282270436,
+      "sensitivity": 0.8846153846153846,
+      "specificity": 0.9017094017094017,
+      "confusion_matrix": [
+        [
+          211,
+          23
+        ],
+        [
+          45,
+          345
+        ]
+      ],
+      "roc_auc_95ci": [
+        0.947947354699065,
+        0.9757606298937165
+      ],
+      "params": 240385,
+      "epochs_run": 25,
+      "best_epoch": 21,
+      "best_val_auc": 0.9902503490447998,
+      "train_seconds": 473.4
+    },
+    "VGG16 probe": {
+      "accuracy": 0.8637820512820513,
+      "roc_auc": 0.964266929651545,
+      "sensitivity": 0.9717948717948718,
+      "specificity": 0.6837606837606838,
+      "confusion_matrix": [
+        [
+          160,
+          74
+        ],
+        [
+          11,
+          379
+        ]
+      ],
+      "roc_auc_95ci": [
+        0.9504588711944965,
+        0.9762296627236727
+      ],
+      "train_seconds": 135.9,
+      "C": 0.01,
+      "val_auc": 0.9887079881938495
+    }
+  }
+}
